@@ -8,7 +8,7 @@ node devation.js
 
 calculates all deviations and statistic manipulations
 
-+- 97.02933770257323 is deviation
++- 0.0005688570615918309 is deviation
 
 P.S გრამიფიკი ვერ გავიგე რა იგულისხმება ASCII კი ვიცი,
     მაგრამ ამ შემთხვევაში რა შუაშია?
