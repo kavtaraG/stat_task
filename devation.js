@@ -29,21 +29,24 @@ const stat = require('./index');
 
 
 const deviation = (() => {
+    let n = 3500000;
     let v = stat.reduce((x, y) => x + y);
     
-    let sqrv = stat.reduce((x, y) => x + y)/stat.length;
-    let stDev = Math.sqrt(((Math.pow((v - sqrv), 2))/(stat.length - 1)));
+    let sqrv = stat.reduce((x, y) => x + y)/n;
+    let stDev = Math.sqrt(((Math.pow((v - sqrv), 2))/(n - 1)));
     // console.log(`Standard Deviation = ${stDev}`);
 
 
     let v1 = stat.reduce((x, y) => x + y);
     
-    let sqrv1 = stat.reduce((x, y) => x + y)/stat.length;
-    let stDev1 = Math.sqrt(((Math.pow((v1 - sqrv1), 2))/(stat.length - 1)));
-    let nRoot = Math.sqrt(stat.length);
+    let sqrv1 = stat.reduce((x, y) => x + y)/n;
+    let stDev1 = Math.sqrt(((Math.pow((v1 - sqrv1), 2))/(n - 1)));
+    let nRoot = Math.sqrt(n);
    
     let standard_error = stDev1/nRoot;
     console.log(`Standard Error = ${standard_error}`);
     console.log(`Deviation = ${stDev - nRoot}`);
 });
 deviation();
+
+//ჩავასწორე
